@@ -1,0 +1,24 @@
+{
+  "name": "prox-backend",
+  "version": "0.1.0",
+  "description": "ProximiT Backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jefflopes/prox-backend.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "request" : "~2.21.0",
+    "underscore" : "*",
+    "winston" :"*",
+    "oauth" : "*",
+    "cluster" : "*",
+    "time" : "*"
+  }
+}

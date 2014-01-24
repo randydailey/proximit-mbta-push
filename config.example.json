@@ -1,0 +1,16 @@
+{
+	"key":"MBTA Developer API Key Goes Here",
+	"ua":
+		{
+			"appKey" : "Urban Airship App Key Here",
+			"appSecret" : "Urban Airship App Secret Here",
+			"masterSecret" : "Urban Airship Master API Secret Here"
+		},
+	"couch":{
+		"user":"root",
+		"pw":"",
+		"server":"127.0.0.1:5984",
+		"db":"mbta"
+	},
+	"logDirectory" : "/var/www/html/"
+}
