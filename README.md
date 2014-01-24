@@ -5,7 +5,7 @@ MBTA Push Alerts
 MBTA Push Alerts powers remote push notifications for the ProximiT iOS app [ProximiT iOS app](http://www.proximitapp.com "ProximiT's Homepage"). ProximiT additionally uses a seperate notification structure based around UILocalNotifications for geofence based alerts which is not included in this project.
 
 ### When Will You Send A Push Message?
-This project checks the [MBTA Alerts Feed](http://realtime.mbta.com/developer/api/v1/alerts?api_key=wX9NwuHnZU2ToO7GmGR9uw "MBTA Alerts Feed") every minute and sends push messages via Urban Airship to registered audiences when a moderate/severe service disruption is detected. Alerts are only be sent during T operating hours and when service disruptions are 'effective' (so although shuttle service may be scheduled.
+This project checks the [MBTA Alerts Feed](http://realtime.mbta.com/developer/api/v1/alerts?api_key=wX9NwuHnZU2ToO7GmGR9uw "MBTA Alerts Feed") every minute and sends push messages via Urban Airship to registered audiences when a moderate/severe service disruption is detected. Alerts are only sent during T operating hours.
 
 Our core filtering logic is captured here:
 
@@ -40,7 +40,7 @@ Our core filtering logic is captured here:
 
 ### Background 
 
-While most of the app logic has been rewritten by [Randy Dailey](https://github.com/randydailey) and [Jeff Lopes](https://github.com/jefflopes), the original code for this project was borrowed from [mbta_alerts](https://github.com/codeforboston/mbta-alerts "MBTA Alerts Repo") repo. Thank you to the folks at codeforboston!
+While most of the app logic has been rewritten by [Randy Dailey](https://github.com/randydailey) and [Jeff Lopes](https://github.com/jefflopes), the original code for this project and node/couchdb architecture was borrowed from [mbta_alerts](https://github.com/codeforboston/mbta-alerts "MBTA Alerts Repo") repo. Thank you to the folks at codeforboston!
 
 ### Tech Notes
 
