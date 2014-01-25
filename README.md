@@ -4,10 +4,12 @@ MBTA Push Alerts
 ### Overview
 MBTA Push Alerts powers remote push notifications for the ProximiT iOS app [ProximiT iOS app](http://www.proximitapp.com "ProximiT's Homepage"). ProximiT additionally uses a seperate notification structure based around UILocalNotifications for geofence based alerts which is not included in this project.
 
-### When Will You Send A Push Message?
-This project checks the [MBTA Alerts Feed](http://realtime.mbta.com/developer/api/v1/alerts?api_key=wX9NwuHnZU2ToO7GmGR9uw "MBTA Alerts Feed") every minute and sends push messages via Urban Airship to registered audiences when a moderate/severe service disruption is detected. Alerts are only sent during T operating hours.
+### When Will You Send A Push? To Who?
+This project checks the [MBTA Alerts Feed](http://realtime.mbta.com/developer/api/v1/alerts?api_key=wX9NwuHnZU2ToO7GmGR9uw "MBTA Alerts Feed") every minute and sends push messages via Urban Airship to registered audiences when a moderate/severe service disruption is detected. 
 
-Our core filtering logic is captured here:
+Alerts are only sent during T operating hours and they are sent only to the audiences that are impacted (In the targeting code, we target people who are opted into 'tags' which include "MBTA Red Line", "MBTA Blue Line" and "MBTA Orange Line."
+
+Our core filter/reject logic is captured here:
 
  ```javascript
   // Filter all alerts that do not affect Subway
@@ -40,7 +42,9 @@ Our core filtering logic is captured here:
 
 ### Background 
 
-While most of the app logic has been rewritten by [Randy Dailey](https://github.com/randydailey) and [Jeff Lopes](https://github.com/jefflopes), the original code for this project and node/couchdb architecture was borrowed from [mbta_alerts](https://github.com/codeforboston/mbta-alerts "MBTA Alerts Repo") repo. Thank you to the folks at codeforboston!
+The original code for this project and node/couchdb architecture was borrowed from the similar [mbta_alerts](https://github.com/codeforboston/mbta-alerts "MBTA Alerts Repo") project. Thank you to the folks at codeforboston!
+
+Much of the app logic was then rewritten by [Randy Dailey](https://github.com/randydailey) and [Jeff Lopes](https://github.com/jefflopes),
 
 ### Tech Notes
 
