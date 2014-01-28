@@ -127,7 +127,7 @@ function filterInvalidAlerts(alerts) {
 
   // Filter all alerts that are not related to a delay/detours
   filteredAlerts = _.filter(filteredAlerts, function(alert) {
-    return alert.effect_name == "Delay" || alert.effect_name == "Detour";
+    return alert.effect_name == "Delay" || alert.effect_name == "Detour" || alert.effect_name == "Shuttle Bus";
   });
   logger.info("Filtering alerts by type: " + JSON.stringify(filteredAlerts));
 
@@ -187,7 +187,7 @@ function sendPush(alert, tags) {
                    "device_types": ["ios"] 
                  };
 
-
+  sent.info("Sending alert: " + JSON.stringify(alert));
   sent.info("Sending payload: " + JSON.stringify(payload));
   ua.pushNotification("/api/push/", payload, function(error) {});
 };
